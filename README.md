@@ -1,31 +1,31 @@
 # LIFEGAME
 
-Scripts de Unity para un juego de vida en móvil. El jugador tiene edad, dinero y varias estadísticas, se mueve en horizontal y entra en edificios.
+Unity scripts for a mobile life game. The player has an age, money, and several stats, moves horizontally, and enters buildings.
 
-Este repositorio **no es un proyecto Unity completo**: no hay `ProjectSettings` ni escenas. Son los `.cs` sueltos para copiarlos a un proyecto que ya tenga el resto de la escena.
+This repository is **not a full Unity project**: there is no `ProjectSettings` folder and no scenes. These are loose `.cs` files to copy into a project that already has the rest of the scene.
 
-## Qué hacen los scripts
+## What the scripts do
 
-| Script | Papel |
+| Script | Role |
 | --- | --- |
-| `PlayerStats` | Edad (empieza en 18), dinero y stats: salud, hambre, frío, salud mental y salud corporal |
-| `CharacterStat` / `StatModifier` | Stat con valor base y modificadores (usa `Kryz.CharacterStats`) |
-| `PlayerController` | Movimiento horizontal. En Android activa el camino táctil (`USING_MOBILE`) |
-| `EnterBuldings` | Entrada a edificios |
-| `DisplayText` / `TextButton` / `ResumeButton` | Texto de UI y reanudar |
+| `PlayerStats` | Age (starts at 18), money, and stats: health, hunger, cold, mental health, and body health |
+| `CharacterStat` / `StatModifier` | A stat with a base value and modifiers (uses `Kryz.CharacterStats`) |
+| `PlayerController` | Horizontal movement. On Android it enables the touch path (`USING_MOBILE`) |
+| `EnterBuldings` | Entering buildings |
+| `DisplayText` / `TextButton` / `ResumeButton` | UI text and resume |
 
 ## Stack
 
 - Unity
 - C#
-- Pensado para móvil (`UNITY_ANDROID`)
-- Depende del asset **Kryz.CharacterStats** (el `using` de `PlayerStats`)
+- Aimed at mobile (`UNITY_ANDROID`)
+- Depends on the **Kryz.CharacterStats** asset (the `using` in `PlayerStats`)
 
-## Cómo usarlo
+## How to use it
 
-1. Crea o abre un proyecto Unity 2D/3D.
-2. Copia estos `.cs` a `Assets`.
-3. Importa el paquete de Character Stats que espera `PlayerStats`.
-4. Coloca `PlayerController` y `PlayerStats` en el jugador y enlaza la UI en el Inspector.
+1. Create or open a 2D/3D Unity project.
+2. Copy these `.cs` files into `Assets`.
+3. Import the Character Stats package that `PlayerStats` expects.
+4. Put `PlayerController` and `PlayerStats` on the player and wire the UI in the Inspector.
 
-`EnterBuldings` conserva ese nombre en el archivo: al referenciar el componente en el Inspector, Unity usa el nombre de la clase tal cual.
+`EnterBuldings` keeps that spelling in the file: when you reference the component in the Inspector, Unity uses the class name as it is.
